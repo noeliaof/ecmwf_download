@@ -1,0 +1,5 @@
+# Cerficate problem: solved!
+
+pip install --upgrade certifi
+
+# from https://stackoverflow.com/questions/35569042/ssl-certificate-verify-failed-with-python3 
