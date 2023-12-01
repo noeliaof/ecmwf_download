@@ -14,7 +14,7 @@ server = ECMWFDataServer()
 
 #product = 'forecast' # forecast, hincast
 product = 'hindcast' # forecast, hincast
-dirbase = '/storage/homefs/no21h426/S2S_data_test/'
+dirbase = '/srv/data/data_oterofelipe_springenberg/'
 dir = '%s/%s/%s/'%(dirbase,product,'/ECMWF/sfc')
 
 if product == 'hindcast':
@@ -113,7 +113,7 @@ for filename in (
    # 'z',
    # 'u10',
    # 'v10',
-    'u',
+   # 'u',
     'v',
 ):
     for prefix in (

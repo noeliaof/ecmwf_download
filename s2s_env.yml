@@ -1,0 +1,11 @@
+name: s2s
+channels:
+  - conda-forge
+dependencies:
+  - ecmwf-api-client
+  - pandas
+  - numpy
+  - scipy
+  - requests
+  - matplotlib
+  - xarray
