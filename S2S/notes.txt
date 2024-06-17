@@ -3,3 +3,6 @@
 pip install --upgrade certifi
 
 # from https://stackoverflow.com/questions/35569042/ssl-certificate-verify-failed-with-python3 
+
+# Python call:
+python data_downloader.py --base_directory /srv/data/data_oterofelipe_springenberg/S2S/ --product "hindcast" --level_type "sfc" --var "v10" --prefix pf

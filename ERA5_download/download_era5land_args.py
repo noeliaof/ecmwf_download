@@ -1,5 +1,7 @@
 import cdsapi
 import calendar
+import sys
+
 c = cdsapi.Client()
 
 """
@@ -30,16 +32,10 @@ def retrieve_interim(yS,yE,mS,mE,dir,var):
 
 def interim_request(requestDates, target, var):
     c.retrieve(
-		'reanalysis-era5-single-levels',
-#		'reanalysis-era5-pressure-levels',
+		'reanalysis-era5-land',
         {
-            'product_type':'reanalysis',
             'format':'netcdf',
             'variable':var,
-#	    'pressure_level':[
-#                           '1000', '850',
-#                           '700','500', '300'
-#              ],  # this is only for RH
             'year':requestDates,
             'month':[
 		    '01','02','03',
@@ -61,23 +57,29 @@ def interim_request(requestDates, target, var):
                 '31'
             ],
             'time':[
-                '00:00','01:00','02:00',
-                '03:00','04:00','05:00',
-                '06:00','07:00','08:00',
-                '09:00','10:00','11:00',
-                '12:00','13:00','14:00',
-                '15:00','16:00','17:00',
-                '18:00','19:00','20:00',
-                '21:00','22:00','23:00'
+                '00:00',
+                '06:00',
+                '12:00',
+                '18:00'
             ],
-            'grid': ['1.0/1.0'],
-            #'area': [80, -40, 30, 40], # North, West, South, East. Default: global
+            # 'grid': ['1.0/1.0'],
+            'area': [80, -30, 20, 40], # North, West, South, East. Default: global
         },
         target)
 
 
-dir="."
+dir="/srv/data/ERA5-LAND/"
+var="volumetric_soil_water_layer_2"
+#var="temperature"
+#var="2m_temperature"
 #var="geopotential"
-var="10m_u_component_of_wind"
-#var="snow_depth"
-retrieve_interim(1979,1979,1,12,dir,var)
+#var="mean_sea_level_pressure"
+#var="10m_v_component_of_wind"
+#var="v_component_of_wind"
+
+yy = sys.argv[1]
+yy= int(yy)
+print(yy)
+print(type(yy))
+retrieve_interim(yy,yy,1,12,dir,var)
+

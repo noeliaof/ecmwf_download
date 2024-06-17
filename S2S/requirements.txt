@@ -1,0 +1,15 @@
+matplotlib
+numpy
+xarray
+netcdf4
+ipython
+cartopy
+spyder
+ecmwf-api-client
+scipy
+cdo
+xesmf
+cfgrib
+xarray-extras
+cftime
+sparse

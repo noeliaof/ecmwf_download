@@ -1,0 +1,26 @@
+name: S2S
+channels:
+  - conda-forge
+  - anaconda
+  - defaults
+dependencies:
+  - matplotlib
+  - numpy
+  - xarray
+  - basemap
+  - netcdf4
+  - python
+  - ipython
+  - cartopy
+  - spyder
+  - ecmwf-api-client
+  - scipy
+  - cdo
+  - xesmf
+  - seaborn
+  - cfgrib
+  - xarray-extras
+  - cftime
+  - sparse
+
+
