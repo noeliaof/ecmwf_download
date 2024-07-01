@@ -1,0 +1,8 @@
+cdsapi
+ecmwf-api-client
+pandas
+numpy
+scipy
+requests
+matplotlib
+xarray
