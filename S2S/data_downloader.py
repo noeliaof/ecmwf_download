@@ -36,10 +36,10 @@ if __name__ == "__main__":
     prefix = args.prefix
     
     # Define the dates to download
-    #dates_monday = pd.date_range("20220103", periods=52, freq="7D")  # Forecasts start Monday 
-    dates_monday = pd.date_range("20210104", periods=52, freq="7D")  # Forecasts start Monday 
-    #dates_thursday = pd.date_range("20220106", periods=52, freq="7D")  # Forecasts start Thursday
-    dates_thursday = pd.date_range("20210107", periods=52, freq="7D")  # Forecasts start Thursday
+    dates_monday = pd.date_range("20220103", periods=52, freq="7D")  # Forecasts start Monday 
+    dates_thursday = pd.date_range("20220106", periods=52, freq="7D")  # Forecasts start Thursday
+    #dates_monday = pd.date_range("20210104", periods=52, freq="7D")  # Forecasts start Monday 
+    #dates_thursday = pd.date_range("20210107", periods=52, freq="7D")  # Forecasts start Thursday
     dates_fcycle = dates_monday.union(dates_thursday)
 
 

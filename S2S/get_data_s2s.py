@@ -98,10 +98,10 @@ meta = {
 
 #dates_monday = pd.date_range("20190701", periods=52, freq="7D") # forecasts start Monday
 # to complete 2021 just get half of the rest year
-dates_monday = pd.date_range("20210104", periods=52, freq="7D") # forecasts start Monday
-#dates_monday = pd.date_range("20210705", periods=52, freq="7D") # forecasts start Monday
-#dates_thursday = pd.date_range("20190704", periods=52, freq="7D") # forecasts start Thursday
-dates_thursday = pd.date_range("20210107", periods=52, freq="7D") # forecasts start Thursday
+#dates_monday = pd.date_range("20210104", periods=52, freq="7D") # forecasts start Monday
+dates_monday = pd.date_range("20230102", periods=52, freq="7D") # forecasts start Monday
+dates_thursday = pd.date_range("20230105", periods=52, freq="7D") # forecasts start Thursday
+#dates_thursday = pd.date_range("20210107", periods=52, freq="7D") # forecasts start Thursday
 #dates_thursday = pd.date_range("20210708", periods=52, freq="7D") # forecasts start Thursday
 dates_fcycle = dates_monday.union(dates_thursday)
 
